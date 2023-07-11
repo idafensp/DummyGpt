@@ -4,7 +4,6 @@ import time
 import random
 import numpy as np
 import pandas as pd
-from PIL import Image
 
 
 from  chat_message import ChatMessage
@@ -46,8 +45,9 @@ if prompt := st.chat_input("What is up?"):
         columns=['lat', 'lon'])
         assistant_message.add_content("map", df)
     if "image" in prompt:
-        image = Image.open('resources/800px-A-Cat.jpg')
-        assistant_message.add_content("image", image)
+        #image = Image.open('resources/800px-A-Cat.jpg')
+        #assistant_message.add_content("image", image)
+        pass
 
     assistant_message.add_content("markdown", "Espero que te guste...")
 
